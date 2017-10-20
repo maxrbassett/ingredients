@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+        <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+        <script src="script.js"></script>
+        <!-- <script src="angularCode.js"></script> -->
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body ng-app="Recipes" ng-controller="MainCtrl">
+      <div id="container">
+        <div id="wholeTITLE">
+            <div id="Toptitle">
+                <h1>GIVE ME AN INGREDIENT</h1>
+            </div>
+            <div id="slogan">
+                <h2>I'll find the perfect recipe!</h2>
+            </div>
+        </div>
+            <div id="form">
+                <form ng-submit="submitter()" >
+                    <input type="text" placeholder="What ingredient do you have?" ng-model="foodVal" id="foodValue"><br>
+                    <div id="goButton">
+                        <input type="submit" value="Go!" id="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+            <div id="results" ng-model="resultDiv">
+            </div>
+     
+
+        <!-- <script type="text/ng-template" id="/recipes.html">
+            <h2>Do you have these ingredients?</h2>
+            <div ng-repeat="ingredient in ingredients track by $index">
+                {{ingredient.text}}
+            </div>
+        </script> -->
+    </body>
+</html>
